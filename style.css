@@ -1,103 +1,46 @@
-/* Base styling for the Aura Tracker app */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
+:root {
+  --bg: #f5f5f5;
+  --fg: #222;
+  --muted: #666;
+  --card: #ffffff;
+  --accent: #34a853;
+  --accent-pressed: #2d8b46;
+  --border: #e5e5e5;
 }
 
-.container {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 1rem;
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--fg); }
+
+.container { max-width: 680px; margin: 0 auto; padding: 16px; }
+h1 { text-align: center; margin: 16px 0 24px; }
+h2 { margin: 0 0 12px; font-size: 1.1rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
-h1 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
+.label { display: block; margin: 10px 0 6px; font-size: 0.95rem; color: var(--muted); }
+.input {
+  width: 100%; padding: 10px 12px; font-size: 1rem;
+  border: 1px solid var(--border); border-radius: 10px; background: #fff;
 }
+.input:focus { outline: none; border-color: #cdd9ed; box-shadow: 0 0 0 3px rgba(100,150,250,0.15); }
 
-form {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+.btn {
+  width: 100%; margin-top: 14px; padding: 12px 14px; font-size: 1rem;
+  color: #fff; background: var(--accent); border: none; border-radius: 10px; cursor: pointer;
 }
+.btn:active { background: var(--accent-pressed); }
 
-form label {
-  font-weight: 600;
-}
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+.table th { background: #fafafa; }
 
-form input,
-form select,
-form button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-form button {
-  background: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  transition: background 0.2s ease;
-}
-
-form button:hover {
-  background: #45a049;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-table th {
-  background: #f0f0f0;
-}
-
-ul#transactions {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul#transactions li {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  .container {
-    padding: 0.5rem;
-  }
-  table th,
-  table td {
-    font-size: 0.9rem;
-    padding: 0.4rem;
-  }
-  form input,
-  form select,
-  form button {
-    font-size: 0.9rem;
-  }
-}
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+.list li:last-child { border-bottom: none; }
