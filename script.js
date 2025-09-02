@@ -3,14 +3,18 @@
 // the leaderboard and recent transactions in real time.
 
 document.addEventListener('DOMContentLoaded', function () {
-  // TODO: Replace the following configuration with your Firebase project values.
-  // You can find these in the Firebase console when you register a web app.
+  // Firebase configuration for the aura-tracker project.
+  // These values were provided from the Firebase console when registering
+  // the web application. Including the full configuration allows
+  // Firebase to initialize all services correctly.
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    // You don't need to specify storageBucket, messagingSenderId or appId
-    // for this simple Firestore-only use case.
+    apiKey: "AIzaSyDJII8KmgZhmguzjpgMSoyLA00FvZjJ_dw",
+    authDomain: "aura-tracker-844af.firebaseapp.com",
+    projectId: "aura-tracker-844af",
+    storageBucket: "aura-tracker-844af.firebasestorage.app",
+    messagingSenderId: "464015663995",
+    appId: "1:464015663995:web:a2400982d2bdd9862f53de",
+    measurementId: "G-K7PPGJT1YF"
   };
 
   // Initialize Firebase only if the config has been updated.
