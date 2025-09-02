@@ -1,0 +1,103 @@
+/* Base styling for the Aura Tracker app */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form select,
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+form button:hover {
+  background: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+table th {
+  background: #f0f0f0;
+}
+
+ul#transactions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#transactions li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  form input,
+  form select,
+  form button {
+    font-size: 0.9rem;
+  }
+}
