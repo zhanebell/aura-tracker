@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aura Tracker</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Firebase v8: using namespaced (compat) API for simplicity -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase v8 (namespaced) – keep ONLY these two includes -->
   <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Your app code must load after Firebase -->
   <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Aura Tracker</h1>
-    <form id="aura-form">
-      <label for="target">Select friend:</label>
-      <select id="target" required>
+
+    <form id="aura-form" class="card">
+      <label class="label">Select friend:</label>
+      <select id="target" class="input">
         <option value="C/Buo">C/Buo</option>
         <option value="C/Bell">C/Bell</option>
         <option value="C/Bautista">C/Bautista</option>
       </select>
 
-      <label for="operation">Operation:</label>
-      <select id="operation" required>
+      <label class="label">Operation:</label>
+      <select id="operation" class="input">
         <option value="1">Add</option>
         <option value="-1">Subtract</option>
       </select>
 
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount" min="1" step="1" value="1" required>
+      <label class="label">Amount:</label>
+      <input id="amount" class="input" type="number" min="1" step="1" value="1" />
 
-      <label for="reason">Reason:</label>
-      <input type="text" id="reason" placeholder="Reason" required>
+      <label class="label">Reason:</label>
+      <input id="reason" class="input" type="text" placeholder="Reason" />
 
-      <button type="submit">Submit</button>
+      <button type="submit" class="btn">Submit</button>
     </form>
 
-    <h2>Leaderboard</h2>
-    <table id="leaderboard">
-      <thead>
-        <tr>
-          <th>Friend</th>
-          <th>Total Aura</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Leaderboard rows inserted here -->
-      </tbody>
-    </table>
+    <section class="card">
+      <h2>Leaderboard</h2>
+      <table id="leaderboard" class="table">
+        <thead>
+          <tr><th>Friend</th><th>Total Aura</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>C/Buo</td><td>0</td></tr>
+          <tr><td>C/Bell</td><td>0</td></tr>
+          <tr><td>C/Bautista</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-    <h2>Recent Transactions</h2>
-    <ul id="transactions">
-      <!-- Transactions inserted here -->
-    </ul>
+    <section class="card">
+      <h2>Recent Transactions</h2>
+      <ul id="transactions" class="list"></ul>
+    </section>
   </div>
 </body>
 </html>
